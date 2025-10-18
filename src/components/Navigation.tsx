@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, MapPin, Instagram, Facebook, Twitter, Youtube } from 'lucide-react';
+import { Menu, X,} from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,16 +56,7 @@ const Navigation = () => {
           </div>
 
           {/* Social Icons with 3D Effects */}
-          <div className="hidden md:flex items-center space-x-4">
-            {[Instagram, Facebook, Twitter, Youtube].map((Icon, index) => (
-              <Icon 
-                key={index}
-                className="w-6 h-6 text-white hover:text-amber-400 cursor-pointer transition-all duration-300 transform hover:scale-125 hover:rotate-12" 
-                style={{ animationDelay: `${index * 0.1}s` }}
-              />
-            ))}
-          </div>
-
+          
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -95,14 +86,7 @@ const Navigation = () => {
                 {item.label}
               </a>
             ))}
-            <div className="flex items-center space-x-6 px-4 py-3">
-              {[Instagram, Facebook, Twitter, Youtube].map((Icon, index) => (
-                <Icon 
-                  key={index}
-                  className="w-6 h-6 text-white hover:text-amber-400 cursor-pointer transition-all duration-300 transform hover:scale-125 hover:rotate-12" 
-                />
-              ))}
-            </div>
+           
           </div>
         </div>
       </div>
